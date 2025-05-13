@@ -114,19 +114,51 @@
     <!-- Contenido Principal -->
     <main class="ml-64 flex-1 space-y-20 max-h-[calc(100vh-5rem)]">
       <!-- Sección: Sobre mí -->
-      <section id="about" class="pt-5 pr-20 pl-20 pb-20 text-gray-300">
-        <h2 class="text-2xl p-3 rounded-xl font-bold mb-4 text-white border border-gray-400 text-center"
-            style="box-shadow: inset 0 4px 10px  rgba(255, 255, 255, 0.2);">
-          Sobre mí
-        </h2>
-        <div class="px-10">
-          <p class="leading-relaxed">
-          Soy Alejandro Camacho, desarrollador de software con enfoque full stack.
-          Me apasiona construir interfaces modernas y robustas, resolver problemas con código limpio
-          y trabajar con tecnologías como Angular, Leaflet y PostgreSQL.
-        </p>
-        </div>
-      </section>
+        <section id="about" class="pt-10 pb-20 px-10 text-gray-300 w-full">
+          <div class="w-full bg-gray-900 rounded-2xl shadow-xl border border-violet-700/40 flex flex-col md:flex-row items-center p-8 gap-6 hover:shadow-violet-500/20 transition-shadow duration-300">
+            <!-- Imagen del perfil -->
+            <div class="w-40 h-40 flex-shrink-0 rounded-full overflow-hidden border-4 border-cyan-500 shadow-md shadow-cyan-800/40">
+              <img src="foto-perfil.jpg" alt="Alejandro Camacho" class="w-full h-full object-cover">
+            </div>
+
+            <!-- Contenido del perfil -->
+            <div class="flex-1 text-left">
+              <h3 class="text-2xl font-bold text-white mb-4 border-b border-cyan-500 inline-block pb-1">Alejandro Camacho</h3>
+              <p class="text-gray-300 leading-relaxed text-justify mb-4">
+                Como Desarrollador de Software con experiencia en diseño, desarrollo e implementación de sistemas, he logrado mejorar la eficiencia de los procesos en los puestos de trabajo que he desempeñado.
+                Experto en tecnologías BackEnd y FrontEnd, así como en metodologías ágiles y herramientas DevOps.
+                Busco contribuir con soluciones innovadoras en proyectos de alto impacto y seguir creciendo profesionalmente en entornos tecnológicos desafiantes.
+              </p>
+
+              <!-- Info adicional -->
+              <div class="grid md:grid-cols-2 gap-6 mt-6">
+                <!-- Información Personal -->
+                <div>
+                  <h4 class="text-cyan-400 text-lg font-semibold mb-2">Información Personal</h4>
+                  <ul class="text-sm text-gray-400 space-y-1">
+                    <li><strong class="text-white">Ubicación:</strong> Quito, Ecuador</li>
+                    <li><strong class="text-white">Email:</strong> alejandro.camachoemail.com</li>
+                    <li><strong class="text-white">Idiomas:</strong> Español (nativo), Inglés (intermedio)</li>
+                    <li><strong class="text-white">Disponibilidad:</strong> Remoto o presencial</li>
+                  </ul>
+                </div>
+
+                <!-- Tecnologías Favoritas -->
+                <div>
+                  <h4 class="text-violet-400 text-lg font-semibold mb-2">Stack Favorito</h4>
+                  <div class="flex flex-wrap gap-3 text-sm">
+                    <span class="bg-cyan-700/30 border border-cyan-500 px-3 py-1 rounded-full text-cyan-300">Angular</span>
+                    <span class="bg-violet-700/30 border border-violet-500 px-3 py-1 rounded-full text-violet-300">Node.js</span>
+                    <span class="bg-pink-700/30 border border-pink-500 px-3 py-1 rounded-full text-pink-300">PostgreSQL</span>
+                    <span class="bg-blue-700/30 border border-blue-500 px-3 py-1 rounded-full text-blue-300">Leaflet</span>
+                    <span class="bg-emerald-700/30 border border-emerald-500 px-3 py-1 rounded-full text-emerald-300">Docker</span>
+                    <span class="bg-yellow-700/30 border border-yellow-500 px-3 py-1 rounded-full text-yellow-300">TypeScript</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>         
 
       <!-- Sección: Proyectos -->
       <section id="projects" class="p-20 text-gray-300">
@@ -173,21 +205,47 @@
         </div>
         </section>
 
-      <!-- Sección: Certificados -->
-      <section id="certifications" class="p-20 text-gray-300">
-        <h2 class="text-2xl p-3 rounded-xl font-bold mb-4 text-white border border-gray-400 text-center"
-          style="box-shadow: inset 0 4px 10px rgba(255, 255, 255, 0.2);">
-          Certificados
-        </h2>
-        <div class="px-10">
-          <ul class="list-disc list-inside">
-            <li>Certificado Profesional en JavaScript - Platzi</li>
-            <li>PostgreSQL y PostGIS - Udemy</li>
-            <li>Curso Angular Completo - Academind</li>
-          </ul>
-        </div>
+        <!-- Sección: Certifications -->
+        <section id="certifications" class="p-20 text-gray-300">
+          <h2 class="text-2xl p-3 rounded-xl font-bold mb-4 text-white border border-gray-400 text-center"
+              style="box-shadow: inset 0 4px 10px rgba(255, 255, 255, 0.2);">
+              Certificados
+          </h2>
+          <div class="px-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-600 transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:border-cyan-400 flex">
+                  <div class="w-16 h-16 flex-shrink-0">
+                      <img src="path_to_espe_logo.png" alt="ESPE Logo" class="w-full h-full object-contain">
+                  </div>
+                  <div class="ml-4 flex flex-col justify-between">
+                      <h3 class="text-xl font-semibold text-white">Manejo Técnico de la Plataforma Power BI</h3>
+                      <p class="mt-2 text-gray-400">ESPE | Diciembre, 2024</p>
+                      <div class="mt-4 w-12 h-1 bg-cyan-500 rounded"></div>
+                  </div>
+              </div>
+              <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-600 transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:border-violet-400 flex">
+                  <div class="w-16 h-16 flex-shrink-0">
+                      <img src="microsoft-azure-fundamentals.png" alt="Microsoft Logo" class="w-full h-full object-contain">
+                  </div>
+                  <div class="ml-4 flex flex-col justify-between">
+                      <h3 class="text-xl font-semibold text-white">Microsoft Certified: Azure Fundamentals</h3>
+                      <p class="mt-2 text-gray-400">Microsoft | Abril, 2023</p>
+                      <div class="mt-4 w-12 h-1 bg-violet-500 rounded"></div>
+                  </div>
+              </div>
+              <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-600 transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:border-cyan-400 flex">
+                  <div class="w-16 h-16 flex-shrink-0">
+                      <img src="coursera.png" alt="Hong Kong University Logo" class="w-full h-full object-contain">
+                  </div>
+                  <div class="ml-4 flex flex-col justify-between">
+                      <h3 class="text-xl font-semibold text-white">Front end Web UI frameworks and Tools</h3>
+                      <p class="mt-2 text-gray-400">The Hong Kong University of Science and Technology (Coursera) | Mayo, 2022</p>
+                      <div class="mt-4 w-12 h-1 bg-cyan-500 rounded"></div>
+                  </div>
+              </div>
+          </div>
       </section>
-
+                 
+    
       <!-- Sección: Habilidades -->
       <section id="skills" class="p-20 text-gray-300">
         <h2 class="text-2xl p-3 rounded-xl font-bold mb-4 text-white border border-gray-400 text-center"
