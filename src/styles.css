@@ -1,2 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 @import "tailwindcss";
+
+
+/* Contenedor general para ocultar scroll nativo si quieres */
+.scroll-progress::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scroll-progress::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scroll-progress::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #06b6d4, #0891b2); /* cyan 500 a 700 */
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.scroll-progress::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #22d3ee, #06b6d4); /* hover más brillante */
+}

@@ -98,7 +98,7 @@
           Contacto
         </div>
       </a>
-      <a href="CVAlejandroCamacho.pdf" target="_blank"
+      <a href="documents/CVAlejandroCamacho.pdf" target="_blank"
         class="group block w-full px-4 py-2 rounded-xl text-gray-300
           hover:border-l-4 hover:border-violet-400 hover:bg-gray-800 hover:shadow-violet-400/40 hover:shadow-md hover:text-white
           transition duration-200"> 
@@ -114,11 +114,11 @@
     <!-- Contenido Principal -->
     <main class="ml-64 flex-1 space-y-20 max-h-[calc(100vh-5rem)]">
       <!-- Sección: Sobre mí -->
-        <section id="about" class="pt-10 pb-20 px-10 text-gray-300 w-full">
+        <section id="about" class="pt-10 pb-10 px-10 text-gray-300 w-full">
           <div class="w-full bg-gray-900 rounded-2xl shadow-xl border border-violet-700/40 flex flex-col md:flex-row items-center p-8 gap-6 hover:shadow-violet-500/20 transition-shadow duration-300">
             <!-- Imagen del perfil -->
             <div class="w-40 h-40 flex-shrink-0 rounded-full overflow-hidden border-4 border-cyan-500 shadow-md shadow-cyan-800/40">
-              <img src="foto-perfil.jpg" alt="Alejandro Camacho" class="w-full h-full object-cover">
+              <img src="imgs/foto-perfil.jpg" alt="Alejandro Camacho" class="w-full h-full object-cover">
             </div>
 
             <!-- Contenido del perfil -->
@@ -137,7 +137,7 @@
                   <h4 class="text-cyan-400 text-lg font-semibold mb-2">Información Personal</h4>
                   <ul class="text-sm text-gray-400 space-y-1">
                     <li><strong class="text-white">Ubicación:</strong> Quito, Ecuador</li>
-                    <li><strong class="text-white">Email:</strong> alejandro.camachoemail.com</li>
+                    <li><strong class="text-white">Email:</strong> camachoosmolik&#64;gmail.com</li>
                     <li><strong class="text-white">Idiomas:</strong> Español (nativo), Inglés (intermedio)</li>
                     <li><strong class="text-white">Disponibilidad:</strong> Remoto o presencial</li>
                   </ul>
@@ -161,22 +161,64 @@
         </section>         
 
       <!-- Sección: Proyectos -->
-      <section id="projects" class="p-20 text-gray-300">
-        <h2 class="text-2xl p-3 rounded-xl font-bold mb-4 text-white border border-gray-400 text-center"
-          style="box-shadow: inset 0 4px 10px rgba(255, 255, 255, 0.2);">
-          Proyectos
+      <section id="projects" class="pt-10 pb-10 px-10 text-gray-300 w-full">
+        <h2 class="text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-emerald-400 to-purple-500 animate-pulse">
+          Proyectos Destacados
         </h2>
-        <div class="px-10">
-          <ul class="space-y-3">
-            <li><strong>Catastro de Cacao:</strong> App geoespacial para productores agrícolas usando Leaflet.</li>
-            <li><strong>Inventario Angular:</strong> Sistema SPA de gestión con Angular + Supabase.</li>
-            <li><strong>GeoDashboard:</strong> Visualizador de datos SIG con Turf.js y PostgreSQL.</li>
-          </ul>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Proyecto 1 -->
+          <div class="bg-gray-900 rounded-2xl shadow-xl border border-cyan-700/40 hover:shadow-cyan-500/30 transition-shadow duration-300 p-6">
+            <h3 class="text-2xl font-semibold text-cyan-300 mb-2">Catastro de Cacao</h3>
+            <p class="text-sm text-gray-300 mb-4">
+              Plataforma geoespacial que permite a productores de cacao registrar sus parcelas, visualizar su ubicación en mapas interactivos con Leaflet, y exportar datos en formatos GeoJSON. Permite validación de polígonos y consulta por provincias usando Turf.js.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-cyan-700/20 text-cyan-300 px-3 py-1 rounded-full text-xs font-medium">Leaflet</span>
+              <span class="bg-purple-700/20 text-purple-300 px-3 py-1 rounded-full text-xs font-medium">GeoJSON</span>
+              <span class="bg-emerald-700/20 text-emerald-300 px-3 py-1 rounded-full text-xs font-medium">Turf.js</span>
+            </div>
+            <a href="https://github.com/osmolik7/catastro-cacao" target="_blank" class="text-cyan-400 text-sm hover:underline">
+              Ver repositorio &rarr;
+            </a>
+          </div>
+
+          <!-- Proyecto 2 -->
+          <div class="bg-gray-900 rounded-2xl shadow-xl border border-emerald-700/40 hover:shadow-emerald-500/30 transition-shadow duration-300 p-6">
+            <h3 class="text-2xl font-semibold text-emerald-300 mb-2">Inventario Angular</h3>
+            <p class="text-sm text-gray-300 mb-4">
+              SPA (Single Page Application) construida con Angular para gestionar productos, categorías y usuarios. Integra autenticación, filtros, panel administrativo y base de datos cloud en Supabase con APIs REST. Ideal para empresas pequeñas y medianas.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-emerald-700/20 text-emerald-300 px-3 py-1 rounded-full text-xs font-medium">Angular</span>
+              <span class="bg-purple-700/20 text-purple-300 px-3 py-1 rounded-full text-xs font-medium">Supabase</span>
+              <span class="bg-cyan-700/20 text-cyan-300 px-3 py-1 rounded-full text-xs font-medium">Tailwind</span>
+            </div>
+            <a href="https://github.com/osmolik7/inventario-angular" target="_blank" class="text-emerald-400 text-sm hover:underline">
+              Ver repositorio &rarr;
+            </a>
+          </div>
+
+          <!-- Proyecto 3 -->
+          <div class="bg-gray-900 rounded-2xl shadow-xl border border-purple-700/40 hover:shadow-purple-500/30 transition-shadow duration-300 p-6">
+            <h3 class="text-2xl font-semibold text-purple-300 mb-2">GeoDashboard</h3>
+            <p class="text-sm text-gray-300 mb-4">
+              Dashboard interactivo de datos espaciales con mapas, gráficos y filtros dinámicos. Desarrollado con PostgreSQL/PostGIS y visualización de capas vectoriales. Incluye estadísticas con Turf.js, capas WMS y exportación de reportes en XLS y PDF.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-purple-700/20 text-purple-300 px-3 py-1 rounded-full text-xs font-medium">Turf.js</span>
+              <span class="bg-cyan-700/20 text-cyan-300 px-3 py-1 rounded-full text-xs font-medium">PostgreSQL</span>
+              <span class="bg-emerald-700/20 text-emerald-300 px-3 py-1 rounded-full text-xs font-medium">QGIS</span>
+            </div>
+            <a href="https://github.com/osmolik7/geodashboard" target="_blank" class="text-purple-400 text-sm hover:underline">
+              Ver repositorio &rarr;
+            </a>
+          </div>
         </div>
       </section>
 
       <!-- Sección: Experiencia -->
-      <section id="experience" class="relative px-6 py-20 bg-transparent text-gray-300 overflow-hidden">
+      <section id="experience" class="pt-10 pb-10 px-10 text-gray-300 w-full">
         <!-- Título futurista centrado -->
         <h2 class="text-4xl font-bold text-center mb-16 tracking-widest bg-gradient-to-r from-cyan-400 via-fuchsia-500 to-violet-500 text-transparent bg-clip-text drop-shadow-[0_2px_4px_rgba(255,255,255,0.3)] animate-pulse">
           Experiencia Profesional
@@ -228,10 +270,10 @@
             </ul>
           </div>
         </div>
-      </section>
-
-      <!-- Sección: Educacion y certificados -->
-      <section id="education-certifications" class="p-20 text-gray-300">
+      </section>    
+      
+      <!-- Sección: Educacion y certificaos -->
+      <section id="education-certifications" class="pt-10 pb-10 px-10 text-gray-300 w-full">
         <h2 class="text-4xl font-bold text-center mb-16 tracking-widest bg-gradient-to-r from-cyan-400 via-fuchsia-500 to-violet-500 text-transparent bg-clip-text drop-shadow-[0_2px_4px_rgba(255,255,255,0.3)]">
           Educación y Certificados
         </h2>
@@ -262,59 +304,110 @@
           </div>
       
           <!-- Columna: Certificados -->
-          <div class="flex flex-col space-y-6">
+          <div class="flex flex-col space-y-6 overflow-y-auto max-h-[400px] pr-2 scroll-progress" id="certificados-scroll">
             
-            <!-- Certificado 1 -->
-            <div class="bg-gray-900 p-4 rounded-xl border border-gray-600 shadow-md hover:shadow-xl hover:border-cyan-400 transition">
-              <div class="flex items-center space-x-4">
-                <img src="ESPE.png" alt="ESPE Logo" class="w-12 h-12 object-contain">
-                <div>
-                  <h4 class="text-white font-semibold">Manejo Técnico de la Plataforma Power BI</h4>
-                  <p class="text-sm text-gray-400">ESPE | Diciembre, 2024</p>
-                </div>
-              </div>
-              <div class="mt-3 w-10 h-1 bg-cyan-500 rounded"></div>
-              <a href="ruta-del-certificado-espe.pdf" target="_blank" class="inline-block mt-4 px-4 py-2 bg-gradient-to-r from-cyan-500 to-cyan-700 text-white text-sm rounded-lg hover:from-cyan-400 hover:to-cyan-600 transition">
-                Ver Certificado
-              </a>
-            </div>
-      
             <!-- Certificado 2 -->
-            <div class="bg-gray-900 p-4 rounded-xl border border-gray-600 shadow-md hover:shadow-xl hover:border-violet-400 transition">
+            <div class="bg-gray-900 p-3 rounded-xl border border-gray-600 shadow-md hover:shadow-xl hover:border-emerald-400 transition">
               <div class="flex items-center space-x-4">
-                <img src="microsoft-azure-fundamentals.png" alt="Microsoft Logo" class="w-12 h-12 object-contain">
-                <div>
-                  <h4 class="text-white font-semibold">Microsoft Certified: Azure Fundamentals</h4>
-                  <p class="text-sm text-gray-400">Microsoft | Abril, 2023</p>
+                <img src="imgs/ESPE.png" alt="Coursera Logo" class="w-10 h-10 object-contain">
+                <div class="flex-1 flex justify-between items-center">
+                  <!-- Texto en columna -->
+                  <div>
+                    <h4 class="text-white font-semibold text-sm">Microsoft Certified: Azure Fundamentals</h4>
+                    <p class="text-xs text-gray-400 mt-1">Microsoft | Abril, 2023</p>
+                  </div>
+                  <!-- Botón alineado verticalmente al medio -->
+                  <a href="documents/ruta-del-certificado-espe.pdf" target="_blank" class="px-3 py-1 bg-gradient-to-r from-emerald-500 to-emerald-700 text-white text-xs rounded-lg hover:from-emerald-400 hover:to-emerald-600 transition whitespace-nowrap">
+                    Ver Certificado
+                  </a>
                 </div>
               </div>
-              <div class="mt-3 w-10 h-1 bg-violet-500 rounded"></div>
-              <a href="ruta-del-certificado-azure.pdf" target="_blank" class="inline-block mt-4 px-4 py-2 bg-gradient-to-r from-violet-500 to-violet-700 text-white text-sm rounded-lg hover:from-violet-400 hover:to-violet-600 transition">
-                Ver Certificado
-              </a>
+              <div class="mt-2 w-10 h-1 bg-emerald-500 rounded"></div>
             </div>
-      
+
+            <!-- Certificado 2 -->
+            <div class="bg-gray-900 p-3 rounded-xl border border-gray-600 shadow-md hover:shadow-xl hover:border-violet-400 transition">
+              <div class="flex items-center space-x-4">
+                <img src="imgs/microsoft-azure-fundamentals.png" alt="Coursera Logo" class="w-10 h-10 object-contain">
+                <div class="flex-1 flex justify-between items-center">
+                  <!-- Texto en columna -->
+                  <div>
+                    <h4 class="text-white font-semibold text-sm">Microsoft Certified: Azure Fundamentals</h4>
+                    <p class="text-xs text-gray-400 mt-1">Microsoft | Abril, 2023</p>
+                  </div>
+                  <!-- Botón alineado verticalmente al medio -->
+                  <a href="documents/CertificadoAzureFundamentals.pdf" target="_blank" class="px-3 py-1 bg-gradient-to-r from-violet-500 to-violet-700 text-white text-xs rounded-lg hover:from-violet-400 hover:to-violet-600 transition whitespace-nowrap">
+                    Ver Certificado
+                  </a>
+                </div>
+              </div>
+              <div class="mt-2 w-10 h-1 bg-violet-500 rounded"></div>
+            </div>
+
             <!-- Certificado 3 -->
-            <div class="bg-gray-900 p-4 rounded-xl border border-gray-600 shadow-md hover:shadow-xl hover:border-cyan-400 transition">
+            <div class="bg-gray-900 p-3 rounded-xl border border-gray-600 shadow-md hover:shadow-xl hover:border-cyan-400 transition">
               <div class="flex items-center space-x-4">
-                <img src="coursera.png" alt="Coursera Logo" class="w-12 h-12 object-contain">
-                <div>
-                  <h4 class="text-white font-semibold">Front end Web UI frameworks and Tools</h4>
-                  <p class="text-sm text-gray-400">HKUST (Coursera) | Mayo, 2022</p>
+                <img src="imgs/coursera.png" alt="Coursera Logo" class="w-10 h-10 object-contain">
+                <div class="flex-1 flex justify-between items-center">
+                  <!-- Texto en columna -->
+                  <div>
+                    <h4 class="text-white font-semibold text-sm">Front end Web UI frameworks and Tools</h4>
+                    <p class="text-xs text-gray-400 mt-1">HKUST (Coursera) | Mayo, 2022</p>
+                  </div>
+                  <!-- Botón alineado verticalmente al medio -->
+                  <a href="documents/CertificadoFrontEnd.pdf" target="_blank" class="px-3 py-1 bg-gradient-to-r from-cyan-500 to-cyan-700 text-white text-xs rounded-lg hover:from-cyan-400 hover:to-cyan-600 transition whitespace-nowrap">
+                    Ver Certificado
+                  </a>
                 </div>
               </div>
-              <div class="mt-3 w-10 h-1 bg-cyan-500 rounded"></div>
-              <a href="ruta-del-certificado-coursera.pdf" target="_blank" class="inline-block mt-4 px-4 py-2 bg-gradient-to-r from-cyan-500 to-cyan-700 text-white text-sm rounded-lg hover:from-cyan-400 hover:to-cyan-600 transition">
-                Ver Certificado
-              </a>
+              <div class="mt-2 w-10 h-1 bg-cyan-500 rounded"></div>
             </div>
-      
+
+            <!-- Certificado 4 -->
+            <div class="bg-gray-900 p-3 rounded-xl border border-gray-600 shadow-md hover:shadow-xl hover:border-cyan-400 transition">
+              <div class="flex items-center space-x-4">
+                <img src="imgs/coursera.png" alt="Coursera Logo" class="w-10 h-10 object-contain">
+                <div class="flex-1 flex justify-between items-center">
+                  <!-- Texto en columna -->
+                  <div>
+                    <h4 class="text-white font-semibold text-sm">Front end Web UI frameworks and Tools</h4>
+                    <p class="text-xs text-gray-400 mt-1">HKUST (Coursera) | Mayo, 2022</p>
+                  </div>
+                  <!-- Botón alineado verticalmente al medio -->
+                  <a href="documents/CertificadoFrontEnd.pdf" target="_blank" class="px-3 py-1 bg-gradient-to-r from-cyan-500 to-cyan-700 text-white text-xs rounded-lg hover:from-cyan-400 hover:to-cyan-600 transition whitespace-nowrap">
+                    Ver Certificado
+                  </a>
+                </div>
+              </div>
+              <div class="mt-2 w-10 h-1 bg-cyan-500 rounded"></div>
+            </div>
+
+            <!-- Certificado 5 -->
+            <div class="bg-gray-900 p-3 rounded-xl border border-gray-600 shadow-md hover:shadow-xl hover:border-cyan-400 transition">
+              <div class="flex items-center space-x-4">
+                <img src="imgs/coursera.png" alt="Coursera Logo" class="w-10 h-10 object-contain">
+                <div class="flex-1 flex justify-between items-center">
+                  <!-- Texto en columna -->
+                  <div>
+                    <h4 class="text-white font-semibold text-sm">Front end Web UI frameworks and Tools</h4>
+                    <p class="text-xs text-gray-400 mt-1">HKUST (Coursera) | Mayo, 2022</p>
+                  </div>
+                  <!-- Botón alineado verticalmente al medio -->
+                  <a href="documents/CertificadoFrontEnd.pdf" target="_blank" class="px-3 py-1 bg-gradient-to-r from-cyan-500 to-cyan-700 text-white text-xs rounded-lg hover:from-cyan-400 hover:to-cyan-600 transition whitespace-nowrap">
+                    Ver Certificado
+                  </a>
+                </div>
+              </div>
+              <div class="mt-2 w-10 h-1 bg-cyan-500 rounded"></div>
+            </div>
+
           </div>
+      
         </div>
-      </section>      
-    
+      </section>
+      
       <!-- Sección: Habilidades -->
-      <section id="skills" class="p-20 text-gray-300">
+      <section id="skills" class="pt-10 pb-10 px-10 text-gray-300 w-full">
         <h2 class="text-4xl font-bold text-center mb-16 tracking-widest bg-gradient-to-r from-cyan-400 via-fuchsia-500 to-violet-500 text-transparent bg-clip-text drop-shadow-sm">
           Habilidades
         </h2>
@@ -402,8 +495,7 @@
 
 
       <!-- Sección: Contacto -->
-      <!-- Sección: Contacto -->
-    <section id="getintouch" class="p-20 from-teal-500 via-blue-500 to-purple-600 text-white">
+    <section id="getintouch" class="pb-10 from-teal-500 via-blue-500 to-purple-600 text-white">
       <h2 class="text-4xl font-bold text-center mb-10 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500">
         ¡Hablemos!
       </h2>
@@ -446,8 +538,8 @@
   </main>
 
   <script>
-    // Validación y manejo del formulario
-    document.getElementById('contactForm').addEventListener('submit', function (event) {
+      // Validación y manejo del formulario
+      document.getElementById('contactForm').addEventListener('submit', function (event) {
       event.preventDefault(); // Prevenir el envío por defecto
   
       // Obtener los valores de los campos
