@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-
+import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
+import emailjs from 'emailjs-com';
+import Swal from 'sweetalert2';
 import * as AOS from 'aos';
 
 @Component({
@@ -17,6 +18,8 @@ export class AppComponent implements OnInit{
   skillsIsVisible: boolean = false;
   getInTouchIsVisible: boolean = false;
 
+  currentYear: number = new Date().getFullYear();
+  
   @ViewChild('about') about!: ElementRef;
   @ViewChild('projects') projects!: ElementRef;
   @ViewChild('experience') experience!: ElementRef;
@@ -58,8 +61,53 @@ export class AppComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    AOS.init();
+    AOS.init({
+      duration: 1800, // Valor por defecto para todos si no se define individualmente
+    });
   }
   title = 'portfolio';
 
+
+  //Para el boton flotante subir
+  showScrollTopButton = false;
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.showScrollTopButton = window.scrollY > 300;
+  }
+
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  
+
+  //Para enviar correos 
+  //para la section del contacto
+  sendEmail(e: Event) {
+    e.preventDefault();
+    const form = e.target as HTMLFormElement;
+    emailjs.sendForm(
+      'service_gboyx6z',
+      'template_kuhvi2q',
+      e.target as HTMLFormElement,
+      '21BKfxFL9DKUjYe0C'
+    )
+    .then(() => {
+      // alert('Mensaje enviado correctamente');
+      Swal.fire({
+        title: "Mensaje enviado correctamente",
+        icon: "success",
+        draggable: true
+      });
+      form.reset();
+    })
+    .catch(() => {
+      // alert('Hubo un error al enviar tu mensaje');
+      Swal.fire({
+        title: "Hubo un error al enviar tu mensaje",
+        icon: "error",
+        draggable: true
+      });
+      form.reset();
+    });
+  }
 }
