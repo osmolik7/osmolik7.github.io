@@ -62,8 +62,10 @@ export class AppComponent implements OnInit{
 
   ngOnInit(): void {
     AOS.init({
-      duration: 1800, // Valor por defecto para todos si no se define individualmente
+      once: true,
+      duration: 1800,
     });
+    this.agregarStarts();
   }
   title = 'portfolio';
 
@@ -109,5 +111,32 @@ export class AppComponent implements OnInit{
       });
       form.reset();
     });
+  }
+
+  agregarStarts(){
+    const starsContainer = document.querySelector('.stars-container');
+    const numberOfStars = 150; // Ajusta este número según la densidad que desees
+
+    for (let i = 0; i < numberOfStars; i++) {
+        const star = document.createElement('div');
+        star.classList.add('star');
+
+        // Posición aleatoria
+        star.style.left = `${Math.random() * 100}%`;
+        star.style.top = `${Math.random() * 100}%`;
+
+        // Retraso de animación aleatorio para que parpadeen de forma desincronizada
+        star.style.animationDelay = `${Math.random() * 2}s`;
+
+        // Tamaño aleatorio (opcional, para variación)
+        const size = Math.random() * 2 + 1; // Entre 1px y 3px
+        star.style.width = `${size}px`;
+        star.style.height = `${size}px`;
+
+        // Opacidad inicial aleatoria para que no todas aparezcan a la vez
+        star.style.opacity = Math.random().toString();
+
+        starsContainer?.appendChild(star);
+    }
   }
 }

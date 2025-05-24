@@ -25,8 +25,8 @@
 <div class="fixed top-[48px] left-0 right-0 h-4 z-50 backdrop-blur-sm bg-gray-900/70"></div>
 
 <!-- Menú horizontal fijo debajo del header -->
-<nav class="fixed top-16 left-1/2 transform -translate-x-1/2 z-50 bg-gray-800/70 text-white shadow-sm rounded-xl px-4 backdrop-blur-xs">
-  <div class="flex justify-center items-center h-12 text-xs space-x-4">
+<nav class="hidden sm:hidden md:block fixed top-16 left-1/2 transform -translate-x-1/2 z-50 bg-gray-800/70 text-sm md:text-base text-white shadow-sm rounded-xl px-4 backdrop-blur-xs">
+  <div class="flex justify-center items-center h-12 space-x-4">
     <a href="#about"
       class="group flex items-center gap-1 px-3 py-1 rounded-xl text-gray-300
         {{aboutIsVisible ? 'border-b-1 border-cyan-400 bg-gray-800 shadow-cyan-400/40 shadow-md text-white' : ''}}
@@ -102,15 +102,14 @@
   </div>
 </nav>
 
-  <!-- pt-20 para dejar espacio al header fijo -->
-  <div class="flex pt-20">
-
+  <div class="flex">
   <!-- Contenido  -->
   <div class="mt-20 flex-1 flex flex-col min-h-screen lg:mx-32">
+    <div class="stars-container" ></div>
     <!-- Contenido Principal -->
     <main class="flex-1 space-y-20 p-6">
       <!-- Sección: Sobre mí -->
-      <section id="about" #about data-section="about" class="pt-10 pb-10 px-4 sm:px-6 md:px-10 text-gray-300 w-full">
+      <section id="about" #about data-section="about" class="scroll-mt-35 my-10 md:my-20 text-gray-300 w-full text-sm md:text-base">
         <div class="w-full bg-gray-900 rounded-2xl shadow-xl border border-cyan-700/40 flex flex-col lg:flex-row items-center md:items-start p-6 md:p-8 gap-6 hover:shadow-cyan-500/20 transition-shadow duration-300">
           
           <!-- Imagen del perfil -->
@@ -159,56 +158,62 @@
       </section>
 
       <!-- Sección: Proyectos -->
-      <section id="projects" #projects data-section="projects" class="pt-10 pb-10 px-4 sm:px-6 md:px-10 text-gray-300 w-full">
-        <h2 class="text-4xl font-bold text-center mb-16 tracking-widest bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-500 text-transparent bg-clip-text drop-shadow-sm">
+      <section id="projects" #projects data-section="projects" class="scroll-mt-35 my-10 md:my-20 text-gray-300 w-full text-sm md:text-base">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 tracking-widest bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-500 text-transparent bg-clip-text drop-shadow-sm">
           Proyectos Destacados
         </h2>
-
         <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
           <!-- Proyecto 1 -->
           <div class="bg-gray-900 rounded-2xl shadow-xl border border-cyan-700/40 hover:shadow-cyan-500/30 transition-shadow duration-300 p-6">
-            <h3 class="text-2xl font-semibold text-cyan-300 mb-2">Catastro de Cacao</h3>
-            <p class="text-sm text-gray-300 mb-4">
-              Plataforma geoespacial que permite a productores de cacao registrar sus parcelas, visualizar su ubicación en mapas interactivos con Leaflet, y exportar datos en formatos GeoJSON. Permite validación de polígonos y consulta por provincias usando Turf.js.
+            <h3 class="text-2xl font-semibold text-cyan-300 mb-2">Portafolio</h3>
+            <p class="text-sm lg:text-md text-gray-300 mb-4">
+              Este portafolio digital está desarrollado con Angular y estilizado con Tailwind CSS y HTML, 
+              con el objetivo de presentar de manera estructurada y moderna mi perfil profesional. 
+              El sitio está dividido en varias secciones clave:
+              Sobre mí, proyectos, experiencia, educación, habilidades y contacto las cuales fueron diseñadas cuidando 
+              el estilo general de la página web y la experiencia de usuario. 
             </p>
             <div class="flex flex-wrap gap-2 mb-4">
-              <span class="bg-cyan-700/20 text-cyan-300 px-3 py-1 rounded-full text-xs font-medium">Leaflet</span>
-              <span class="bg-purple-700/20 text-purple-300 px-3 py-1 rounded-full text-xs font-medium">GeoJSON</span>
-              <span class="bg-emerald-700/20 text-emerald-300 px-3 py-1 rounded-full text-xs font-medium">Turf.js</span>
+              <span class="bg-cyan-700/20 text-cyan-300 px-3 py-1 rounded-full text-xs font-medium">Angular</span>
+              <span class="bg-purple-700/20 text-purple-300 px-3 py-1 rounded-full text-xs font-medium">TailwindCSS</span>
+              <span class="bg-emerald-700/20 text-emerald-300 px-3 py-1 rounded-full text-xs font-medium">HTML</span>
             </div>
-            <a href="https://github.com/osmolik7/catastro-cacao" target="_blank" class="text-cyan-400 text-sm hover:underline">
+            <a href="https://github.com/osmolik7/osmolik7.github.io" target="_blank" class="text-cyan-400 text-sm hover:underline">
               Ver repositorio &rarr;
             </a>
           </div>
 
           <!-- Proyecto 2 -->
           <div class="bg-gray-900 rounded-2xl shadow-xl border border-emerald-700/40 hover:shadow-emerald-500/30 transition-shadow duration-300 p-6">
-            <h3 class="text-2xl font-semibold text-emerald-300 mb-2">Inventario Angular</h3>
+            <h3 class="text-2xl font-semibold text-emerald-300 mb-2">Administrador de Usuarios</h3>
             <p class="text-sm text-gray-300 mb-4">
-              SPA (Single Page Application) construida con Angular para gestionar productos, categorías y usuarios. Integra autenticación, filtros, panel administrativo y base de datos cloud en Supabase con APIs REST. Ideal para empresas pequeñas y medianas.
+              Desarrollé un sistema web completo para la gestión de usuarios, orientado a la administración segura de accesos y roles. La interfaz fue construida con Angular y el Backend con SpringBoot, en el cual aplique todo lo aprendido en un curso de Udemy.
             </p>
             <div class="flex flex-wrap gap-2 mb-4">
               <span class="bg-emerald-700/20 text-emerald-300 px-3 py-1 rounded-full text-xs font-medium">Angular</span>
-              <span class="bg-purple-700/20 text-purple-300 px-3 py-1 rounded-full text-xs font-medium">Supabase</span>
-              <span class="bg-cyan-700/20 text-cyan-300 px-3 py-1 rounded-full text-xs font-medium">Tailwind</span>
+              <span class="bg-purple-700/20 text-purple-300 px-3 py-1 rounded-full text-xs font-medium">SpringBoot</span>
+              <span class="bg-emerald-700/20 text-emerald-300 px-3 py-1 rounded-full text-xs font-medium">MySQL</span>
+              <span class="bg-cyan-700/20 text-cyan-300 px-3 py-1 rounded-full text-xs font-medium">Bootstrap</span>
             </div>
-            <a href="https://github.com/osmolik7/inventario-angular" target="_blank" class="text-emerald-400 text-sm hover:underline">
+            <a href="https://github.com/osmolik7/app-user-udemy" target="_blank" class="text-emerald-400 text-sm hover:underline">
               Ver repositorio &rarr;
             </a>
           </div>
 
           <!-- Proyecto 3 -->
           <div class="bg-gray-900 rounded-2xl shadow-xl border border-cyan-700/40 hover:shadow-cyan-500/30 transition-shadow duration-300 p-6">
-            <h3 class="text-2xl font-semibold text-cyan-300 mb-2">GeoDashboard</h3>
-            <p class="text-sm text-gray-300 mb-4">
-              Dashboard interactivo de datos espaciales con mapas, gráficos y filtros dinámicos. Desarrollado con PostgreSQL/PostGIS y visualización de capas vectoriales. Incluye estadísticas con Turf.js, capas WMS y exportación de reportes en XLS y PDF.
-            </p>
+            <h3 class="text-2xl font-semibold text-cyan-300 mb-2">Gestor de Passwords</h3>
+              <p class="text-sm text-gray-300 mb-4">
+                Este proyecto es una aplicación web diseñada para la gestión segura de contraseñas, combinando una interfaz intuitiva con robustas medidas de seguridad. 
+                Utiliza HTML, Blade y Bootstrap para el frontend, proporcionando una experiencia de usuario dinámica y responsiva,
+                mientras que para el BackEnd se hace uso de Laravel.            
+              </p>
             <div class="flex flex-wrap gap-2 mb-4">
-              <span class="bg-purple-700/20 text-purple-300 px-3 py-1 rounded-full text-xs font-medium">Turf.js</span>
+              <span class="bg-purple-700/20 text-purple-300 px-3 py-1 rounded-full text-xs font-medium">Laravel</span>
               <span class="bg-cyan-700/20 text-cyan-300 px-3 py-1 rounded-full text-xs font-medium">PostgreSQL</span>
-              <span class="bg-emerald-700/20 text-emerald-300 px-3 py-1 rounded-full text-xs font-medium">QGIS</span>
+              <span class="bg-emerald-700/20 text-emerald-300 px-3 py-1 rounded-full text-xs font-medium">Bootstrap</span>
             </div>
-            <a href="https://github.com/osmolik7/geodashboard" target="_blank" class="text-cyan-400 text-sm hover:underline">
+            <a href="https://github.com/osmolik7/password-manager" target="_blank" class="text-cyan-400 text-sm hover:underline">
               Ver repositorio &rarr;
             </a>
           </div>
@@ -216,126 +221,128 @@
       </section>
 
       <!-- Sección: Experiencia -->
-      <section id="experience" #experience data-section="experience" class="pt-10 pb-10 px-10 text-gray-300 w-full">
-        <h2 class="text-4xl font-bold text-center mb-16 tracking-widest bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-500 text-transparent bg-clip-text drop-shadow-sm">
+      <section id="experience" #experience data-section="experience" class="scroll-mt-35 my-10 md:my-20 text-gray-300 w-full text-sm md:text-base">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 tracking-widest bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-500 text-transparent bg-clip-text drop-shadow-sm">
           Experiencia Profesional
         </h2>
-      
         <div class="space-y-12 max-w-4xl mx-auto">
           <!-- AGROCALIDAD -->
-          <div class="relative border-l-4 border-emerald-500 bg-gray-900 rounded-xl p-6 shadow-md shadow-emerald-900/30 pl-12">
+          <div class="relative border-l-4 border-emerald-500 bg-gray-900 rounded-xl p-6 shadow-md shadow-emerald-900/30 pl-4">
             <div class="absolute -left-3 top-6 w-6 h-6 bg-emerald-500 rounded-full border-4 border-gray-900"></div>
             <div class="flex items-start gap-4">
               <img src="imgs/agrocalidad.jpg" alt="Agrocalidad Logo" class="w-14 h-14 object-cover rounded-full border border-gray-700 shadow-md" />
               <div>
                 <h3 class="text-xl font-semibold text-white">Analista de Sistemas - Agrocalidad</h3>
                 <span class="text-sm text-gray-400">Febrero 2023 - Actualidad</span>
-                <ul class="mt-3 ml-5 space-y-2 text-gray-400 list-[disc] marker:text-emerald-500">
-                  <li>Rediseñé y optimicé el sistema "GUIA", mejorando su eficiencia con PHP y PostgreSQL.</li>
-                  <li>Participé en la implementación de CI/CD en el ambiente de pruebas.</li>
-                  <li>Colaboré en el diseño de nuevas funcionalidades para procesos administrativos.</li>
-                </ul>
               </div>
             </div>
+              <ul class="mt-3 pl-2 sm:pl-5 md:pl-10 lg:pl-20 space-y-2 text-gray-300 list-[disc] marker:text-emerald-500">
+                  <li>Rediseñé y optimicé funcionalidades dentro del sistema "GUIA", mejorando su eficiencia con PHP, PostgreSQL y JS.</li>
+                  <li>Participé en la implementación de un flujo basico de CI/CD .</li>
+                  <li>Colaboré en el diseño de nuevas funcionalidades para procesos administrativos.</li>
+              </ul>
           </div>
       
           <!-- CNE -->
-          <div class="relative border-l-4 border-emerald-700 bg-gray-900 rounded-xl p-6 shadow-md shadow-emerald-900/30 pl-12">
+          <div class="relative border-l-4 border-emerald-700 bg-gray-900 rounded-xl p-6 shadow-md shadow-emerald-900/30 pl-4">
             <div class="absolute -left-3 top-6 w-6 h-6 bg-emerald-700 rounded-lg border-4 border-gray-900 rotate-45"></div>
             <div class="flex items-start gap-4">
               <img src="imgs/cne.jpg" alt="CNE Logo" class="w-14 h-14 object-cover rounded-full border border-gray-700 shadow-md" />
               <div>
                 <h3 class="text-xl font-semibold text-white">Especialista de Sistemas - CNE</h3>
                 <span class="text-sm text-gray-400">Julio 2022 - Enero 2023</span>
-                <ul class="mt-3 ml-5 space-y-2 text-gray-400 list-[disc] marker:text-emerald-700">
-                  <li>Colaboré en el desarrollo de sistemas electorales con .NET y Oracle.</li>
-                  <li>Optimicé consultas SQL, mejorando el rendimiento en un 40%.</li>
-                  <li>Coordiné equipos para mantener la estabilidad del sistema electoral.</li>
-                </ul>
               </div>
             </div>
+              <ul class="mt-3 pl-2 sm:pl-5 md:pl-10 lg:pl-20 space-y-2 text-gray-300 list-[disc] marker:text-emerald-700">
+                <li>Colaboré en el desarrollo de sistemas electorales con desarrollando aplicaciones web con lenguajes como C# en .NET y Oracle para la base de datos.</li>
+                <li>Optimicé consultas procedimiento en Oracle, mejorando el rendimiento de los mismos en al menos un 30%.</li>
+              </ul>
           </div>
       
           <!-- CORPROINFO -->
-          <div class="relative border-l-4 border-emerald-500 bg-gray-900 rounded-xl p-6 shadow-md shadow-emerald-900/30 pl-12">
+          <div class="relative border-l-4 border-emerald-500 bg-gray-900 rounded-xl p-6 shadow-md shadow-emerald-900/30 pl-4">
             <div class="absolute -left-3 top-6 w-6 h-6 bg-emerald-500 rounded-full border-4 border-gray-900"></div>
             <div class="flex items-start gap-4">
               <img src="imgs/ofsercont.jpg" alt="Corproinfo Logo" class="w-14 h-14 object-cover rounded-full border border-gray-700 shadow-md" />
               <div>
                 <h3 class="text-xl font-semibold text-white">Desarrollador Web - Ofsercont</h3>
                 <span class="text-sm text-gray-400">Septiembre 2019 - Mayo 2022</span>
-                <ul class="mt-3 ml-5 space-y-2 text-gray-400 list-[disc] marker:text-emerald-500">
-                  <li>Desarrollé un sistema de contabilidad web en PHP y MySQL.</li>
-                  <li>Implementé funcionalidades que ayudaron a las PYMES a ser más eficientes.</li>
-                  <li>Refactoricé código y optimicé consultas mejorando estabilidad.</li>
-                </ul>
               </div>
             </div>
+              <ul class="mt-3 pl-2 sm:pl-5 md:pl-10 lg:pl-20 space-y-2 text-gray-300 list-[disc] marker:text-emerald-500">
+                <li>Desarrollé nuevas funcionalidades para un sistema de contabilidad web desarrollado en PHP y MySQL.</li>
+                <li>Implementé funcionalidades que ayudaron a las PYMES a ser más eficientes.</li>
+                <li>Refactoricé código y optimicé consultas mejorando estabilidad.</li>
+              </ul>
           </div>
       
           <!-- ACONTPLUS -->
-          <div class="relative border-l-4 border-emerald-700 bg-gray-900 rounded-xl p-6 shadow-md shadow-emerald-900/30 pl-10">
+          <div class="relative border-l-4 border-emerald-700 bg-gray-900 rounded-xl p-6 shadow-md shadow-emerald-900/30 pl-4">
             <div class="absolute -left-3 top-6 w-6 h-6 bg-emerald-700 rounded-lg border-4 border-gray-900 rotate-45"></div>
             <div class="flex items-start gap-4">
               <img src="imgs/acontplus.jpg" alt="AcontPlus Logo" class="w-14 h-14 object-cover rounded-full border border-gray-700 shadow-md" />
               <div>
                 <h3 class="text-xl font-semibold text-white">Desarrollador Java - AcontPlus</h3>
                 <span class="text-sm text-gray-400">Abril 2019 - Agosto 2019</span>
-                <ul class="mt-3 ml-5 space-y-2 text-gray-400 list-[disc] marker:text-emerald-700">
-                  <li>Mejoré un sistema de facturación de escritorio con Java y MySQL.</li>
-                  <li>Implementé funcionalidades personalizadas para pequeñas empresas.</li>
-                </ul>
               </div>
             </div>
+              <ul class="mt-3 pl-2 sm:pl-5 md:pl-10 lg:pl-20 space-y-2 text-gray-300 list-[disc] marker:text-emerald-700">
+                <li>Mejoré un sistema de facturación de escritorio con Java y MySQL.</li>
+                <li>Implementé funcionalidades personalizadas para pequeñas empresas.</li>
+              </ul>
           </div>
+          
         </div>
       </section>
       
       <!-- Sección: Educacion y certificaos -->
-      <section id="educationCertifications" #educationCertifications data-section="education-certifications" class="pt-10 pb-10 px-10 text-gray-300 w-full">
-        <h2 class="text-4xl font-bold text-center mb-16 tracking-widest bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-500 text-transparent bg-clip-text drop-shadow-sm">
+      <section id="educationCertifications" #educationCertifications data-section="education-certifications" class="scroll-mt-35 my-10 md:my-20 text-gray-300 w-full text-sm md:text-base">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 tracking-widest bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-500 text-transparent bg-clip-text drop-shadow-sm">
           Educación y Certificados
         </h2>
-      
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10  mx-auto">
-      
           <!-- Columna: Educación -->
-          <div class="bg-gray-900 rounded-xl border border-gray-600 p-6 shadow-md transition hover:shadow-xl hover:border-emerald-500 hover:scale-105 hover:bg-gradient-to-br hover:from-gray-900 hover:via-gray-800 hover:to-gray-900 duration-300 ease-in-out">
-            
+          <div class="bg-gray-900 rounded-2xl shadow-xl border border-emerald-700/40 hover:shadow-emerald-500/30 transition-shadow duration-300 p-6">
             <!-- Maestría -->
-            <div class="mb-8 flex items-start gap-4">
-              <!-- Logo -->
-              <div class="w-16 h-16 flex-shrink-0">
-                <img src="imgs/unir.jpg" alt="Logo UNIR" class="w-full h-full object-contain rounded" />
+            <div class="mb-8">
+              <div class="flex items-start mb-8 gap-4">
+                <!-- Logo -->
+                <div class="w-16 h-16 flex-shrink-0">
+                  <img src="imgs/unir.jpg" alt="Logo UNIR" class="w-full h-full object-contain rounded" />
+                </div>
+                <!-- Texto -->
+                <div>
+                  <p class="text-lg text-white font-medium">Maestría en DevOps</p>
+                  <div class="my-2 w-42 h-1 bg-emerald-500 rounded"></div>
+                  <p class="text-gray-400">Universidad Internacional de la Rioja | Mayo, 2024</p>
+                </div>
               </div>
-              <!-- Texto -->
               <div>
-                <p class="text-lg text-white font-medium">Maestría en DevOps</p>
-                <div class="my-2 w-42 h-1 bg-emerald-500 rounded"></div>
-                <p class="text-sm text-gray-400">Universidad Internacional de la Rioja | Mayo, 2024</p>
-                <p class="mt-2 text-gray-300 text-sm leading-relaxed">
+                <p class="mt-2 text-gray-200">
                   Adquirí conocimientos avanzados en integración y entrega continua (CI/CD), automatización de infraestructuras, contenedores, orquestación con Kubernetes, y metodologías ágiles aplicadas al ciclo de vida del desarrollo de software.
                 </p>
               </div>
             </div>
-
             <!-- Pregrado -->
-            <div class="flex items-start gap-4">
-              <!-- Logo -->
-              <div class="w-16 h-16 flex-shrink-0">
-                <img src="imgs/utmach.jpg" alt="Logo UTMACH" class="w-full h-full object-contain rounded" />
+             <div class="mb-8">
+              <div class="flex items-start mb-8 gap-4">
+                <!-- Logo -->
+                <div class="w-16 h-16 flex-shrink-0">
+                  <img src="imgs/utmach.jpg" alt="Logo UTMACH" class="w-full h-full object-contain rounded" />
+                </div>
+                <!-- Texto -->
+                <div>
+                  <p class="text-lg text-white font-medium">Ingeniero de Sistemas</p>
+                  <div class="my-2 w-42 h-1 bg-emerald-500 rounded"></div>
+                  <p class="text-gray-400">Universidad Técnica de Machala | Marzo, 2019</p>
+                </div>
               </div>
-              <!-- Texto -->
               <div>
-                <p class="text-lg text-white font-medium">Ingeniero de Sistemas</p>
-                <div class="my-2 w-46 h-1 bg-emerald-500 rounded"></div>
-                <p class="text-sm text-gray-400">Universidad Técnica de Machala | Marzo, 2019</p>
-                <p class="mt-2 text-gray-300 text-sm leading-relaxed">
+                <p class="mt-2 text-gray-200">
                   Desarrollé habilidades sólidas en programación, bases de datos, redes, análisis de sistemas y estructuras de software. También fortalecí mis capacidades de pensamiento lógico y resolución de problemas tecnológicos en entornos reales.
                 </p>
               </div>
             </div>
-
             <!-- Botón alineado al centro -->
             <div class="flex justify-center mt-6">
               <a href="documents/Titulos.pdf" target="_blank" class="px-4 py-2 bg-gradient-to-r from-cyan-500 to-cyan-700 text-white text-xs rounded-lg hover:from-cyan-400 hover:to-cyan-600 transition whitespace-nowrap">
@@ -343,13 +350,69 @@
               </a>
             </div>
           </div>
-
       
           <!-- Columna: Certificados -->
-          <div class="flex flex-col space-y-6 overflow-y-auto max-h-[415px] pr-2 scroll-progress" id="certificados-scroll">
+          <div class="flex flex-col space-y-5 overflow-y-auto max-h-[450px] pr-2 scroll-progress" id="certificados-scroll">
             
+            <!-- Certificado 8 -->
+          <div class="bg-gray-900 rounded-xl shadow-md border border-emerald-700/40 hover:shadow-emerald-500/30 transition-shadow duration-300 p-3">
+              <div class="flex items-center space-x-4">
+                <img src="imgs/fundamentosarquitectura.png" alt="Coursera Logo" class="w-10 h-10 object-contain">
+                <div class="flex-1 flex justify-between items-center">
+                  <!-- Texto en columna -->
+                  <div>
+                    <h4 class="text-white font-semibold text-sm">Fundamentos Arquitectura</h4>
+                    <p class="text-xs text-gray-400 mt-1">Codigo Facilito | Mayo, 2025</p>
+                  </div>
+                  <!-- Botón alineado verticalmente al medio -->
+                  <a href="documents/CertificadoFundamentosArquitectura.pdf" target="_blank" class="p-1 md:p-2 bg-gradient-to-r from-cyan-500 to-cyan-700 text-white text-xs rounded-lg hover:from-cyan-400 hover:to-cyan-600 transition whitespace-nowrap">
+                    Ver Certificado
+                  </a>
+                </div>
+              </div>
+              <div class="mt-2 w-10 h-1 bg-emerald-500 rounded"></div>
+            </div>
+
+            <!-- Certificado 7 -->
+          <div class="bg-gray-900 rounded-xl shadow-md border border-emerald-700/40 hover:shadow-emerald-500/30 transition-shadow duration-300 p-3">
+              <div class="flex items-center space-x-4">
+                <img src="imgs/docker.png" alt="Coursera Logo" class="w-10 h-10 object-contain">
+                <div class="flex-1 flex justify-between items-center">
+                  <!-- Texto en columna -->
+                  <div>
+                    <h4 class="text-white font-semibold text-sm">Docker Profesinal</h4>
+                    <p class="text-xs text-gray-400 mt-1">Codigo Facilito | Mayo, 2025</p>
+                  </div>
+                  <!-- Botón alineado verticalmente al medio -->
+                  <a href="documents/CertificadoDockerProfesional.pdf" target="_blank" class="p-1 md:p-2 bg-gradient-to-r from-cyan-500 to-cyan-700 text-white text-xs rounded-lg hover:from-cyan-400 hover:to-cyan-600 transition whitespace-nowrap">
+                    Ver Certificado
+                  </a>
+                </div>
+              </div>
+              <div class="mt-2 w-10 h-1 bg-emerald-500 rounded"></div>
+            </div>
+
+            <!-- Certificado 6 -->
+          <div class="bg-gray-900 rounded-xl shadow-md border border-emerald-700/40 hover:shadow-emerald-500/30 transition-shadow duration-300 p-3">
+              <div class="flex items-center space-x-4">
+                <img src="imgs/git.png" alt="Coursera Logo" class="w-10 h-10 object-contain">
+                <div class="flex-1 flex justify-between items-center">
+                  <!-- Texto en columna -->
+                  <div>
+                    <h4 class="text-white font-semibold text-sm">Git Profesional</h4>
+                    <p class="text-xs text-gray-400 mt-1">Codigo Facilito | Mayo, 2025</p>
+                  </div>
+                  <!-- Botón alineado verticalmente al medio -->
+                  <a href="documents/CertificadoGitProfesional.pdf" target="_blank" class="p-1 md:p-2 bg-gradient-to-r from-cyan-500 to-cyan-700 text-white text-xs rounded-lg hover:from-cyan-400 hover:to-cyan-600 transition whitespace-nowrap">
+                    Ver Certificado
+                  </a>
+                </div>
+              </div>
+              <div class="mt-2 w-10 h-1 bg-emerald-500 rounded"></div>
+            </div>
+
             <!-- Certificado 5 -->
-            <div class="bg-gray-900 p-3 rounded-xl border border-gray-600 shadow-md hover:shadow-xl hover:border-emerald-400 transition">
+          <div class="bg-gray-900 rounded-xl shadow-md border border-emerald-700/40 hover:shadow-emerald-500/30 transition-shadow duration-300 p-3">
               <div class="flex items-center space-x-4">
                 <img src="imgs/udemy.png" alt="Coursera Logo" class="w-10 h-10 object-contain">
                 <div class="flex-1 flex justify-between items-center">
@@ -359,7 +422,7 @@
                     <p class="text-xs text-gray-400 mt-1">Udemy | Mayo, 2025</p>
                   </div>
                   <!-- Botón alineado verticalmente al medio -->
-                  <a href="documents/CertificadoUdemyAngular.pdf" target="_blank" class="px-3 py-1 bg-gradient-to-r from-cyan-500 to-cyan-700 text-white text-xs rounded-lg hover:from-cyan-400 hover:to-cyan-600 transition whitespace-nowrap">
+                  <a href="documents/CertificadoUdemyAngular.pdf" target="_blank" class="p-1 md:p-2 bg-gradient-to-r from-cyan-500 to-cyan-700 text-white text-xs rounded-lg hover:from-cyan-400 hover:to-cyan-600 transition whitespace-nowrap">
                     Ver Certificado
                   </a>
                 </div>
@@ -368,7 +431,7 @@
             </div>
 
             <!-- Certificado 4 -->
-            <div class="bg-gray-900 p-3 rounded-xl border border-gray-600 shadow-md hover:shadow-xl hover:border-emerald-400 transition">
+          <div class="bg-gray-900 rounded-xl shadow-md border border-emerald-700/40 hover:shadow-emerald-500/30 transition-shadow duration-300 p-3">
               <div class="flex items-center space-x-4">
                 <img src="imgs/ESPE.png" alt="ESPE Logo" class="w-10 h-10 object-contain">
                 <div class="flex-1 flex justify-between items-center">
@@ -378,7 +441,7 @@
                     <p class="text-xs text-gray-400 mt-1">ESPE | Abril, 2025</p>
                   </div>
                   <!-- Botón alineado verticalmente al medio -->
-                  <a href="documents/CertificadoPowerBI.pdf" target="_blank" class="px-3 py-1 bg-gradient-to-r from-cyan-500 to-cyan-700 text-white text-xs rounded-lg hover:from-cyan-400 hover:to-cyan-600 transition whitespace-nowrap">
+                  <a href="documents/CertificadoPowerBI.pdf" target="_blank" class="p-1 md:p-2 bg-gradient-to-r from-cyan-500 to-cyan-700 text-white text-xs rounded-lg hover:from-cyan-400 hover:to-cyan-600 transition whitespace-nowrap">
                     Ver Certificado
                   </a>
                 </div>
@@ -387,7 +450,7 @@
             </div>
 
             <!-- Certificado 3 -->
-            <div class="bg-gray-900 p-3 rounded-xl border border-gray-600 shadow-md hover:shadow-xl hover:border-emerald-400 transition">
+          <div class="bg-gray-900 rounded-xl shadow-md border border-emerald-700/40 hover:shadow-emerald-500/30 transition-shadow duration-300 p-3">
               <div class="flex items-center space-x-4">
                 <img src="imgs/capacitateEmpleo.png" alt="Capacitate para el empleo Logo" class="w-10 h-10 object-contain">
                 <div class="flex-1 flex justify-between items-center">
@@ -397,7 +460,7 @@
                     <p class="text-xs text-gray-400 mt-1">Capacitate para el empleo | Enero, 2025</p>
                   </div>
                   <!-- Botón alineado verticalmente al medio -->
-                  <a href="documents/CertificadoDesarrolladorPHP.pdf" target="_blank" class="px-3 py-1 bg-gradient-to-r from-cyan-500 to-cyan-700 text-white text-xs rounded-lg hover:from-cyan-400 hover:to-cyan-600 transition whitespace-nowrap">
+                  <a href="documents/CertificadoDesarrolladorPHP.pdf" target="_blank" class="p-1 md:p-2 bg-gradient-to-r from-cyan-500 to-cyan-700 text-white text-xs rounded-lg hover:from-cyan-400 hover:to-cyan-600 transition whitespace-nowrap">
                     Ver Certificado
                   </a>
                 </div>
@@ -406,7 +469,7 @@
             </div>
 
             <!-- Certificado 2 -->
-            <div class="bg-gray-900 p-3 rounded-xl border border-gray-600 shadow-md hover:shadow-xl hover:border-emerald-400 transition">
+          <div class="bg-gray-900 rounded-xl shadow-md border border-emerald-700/40 hover:shadow-emerald-500/30 transition-shadow duration-300 p-3">
               <div class="flex items-center space-x-4">
                 <img src="imgs/microsoft-azure-fundamentals.png" alt="Microsoft Logo" class="w-10 h-10 object-contain">
                 <div class="flex-1 flex justify-between items-center">
@@ -416,7 +479,7 @@
                     <p class="text-xs text-gray-400 mt-1">Microsoft | Abril, 2023</p>
                   </div>
                   <!-- Botón alineado verticalmente al medio -->
-                  <a href="documents/CertificadoAzureFundamentals.pdf" target="_blank" class="px-3 py-1 bg-gradient-to-r from-cyan-500 to-cyan-700 text-white text-xs rounded-lg hover:from-cyan-400 hover:to-cyan-600 transition whitespace-nowrap">
+                  <a href="documents/CertificadoAzureFundamentals.pdf" target="_blank" class="p-1 md:p-2 bg-gradient-to-r from-cyan-500 to-cyan-700 text-white text-xs rounded-lg hover:from-cyan-400 hover:to-cyan-600 transition whitespace-nowrap">
                     Ver Certificado
                   </a>
                 </div>
@@ -425,7 +488,7 @@
             </div>
 
             <!-- Certificado 1 -->
-            <div class="bg-gray-900 p-3 rounded-xl border border-gray-600 shadow-md hover:shadow-xl hover:border-emerald-400 transition">
+          <div class="bg-gray-900 rounded-xl shadow-md border border-emerald-700/40 hover:shadow-emerald-500/30 transition-shadow duration-300 p-3">
               <div class="flex items-center space-x-4">
                 <img src="imgs/coursera.png" alt="Coursera Logo" class="w-10 h-10 object-contain">
                 <div class="flex-1 flex justify-between items-center">
@@ -435,23 +498,24 @@
                     <p class="text-xs text-gray-400 mt-1">Hong Kong University (Coursera) | Mayo, 2022</p>
                   </div>
                   <!-- Botón alineado verticalmente al medio -->
-                  <a href="documents/CertificadoFrontEnd.pdf" target="_blank" class="px-3 py-1 bg-gradient-to-r from-cyan-500 to-cyan-700 text-white text-xs rounded-lg hover:from-cyan-400 hover:to-cyan-600 transition whitespace-nowrap">
+                  <a href="documents/CertificadoFrontEnd.pdf" target="_blank" class="p-1 md:p-2 bg-gradient-to-r from-cyan-500 to-cyan-700 text-white text-xs rounded-lg hover:from-cyan-400 hover:to-cyan-600 transition whitespace-nowrap">
                     Ver Certificado
                   </a>
                 </div>
               </div>
               <div class="mt-2 w-10 h-1 bg-emerald-500 rounded"></div>
             </div>
+
           </div>
         </div>
       </section>
       
       <!-- Sección: Educacion y certificaos -->
-      <section id="skills" #skills class=" text-white py-16 px-4">
-        <h2 class="text-3xl md:text-4xl font-bold text-cyan-400 text-center mb-10" data-aos="fade-in">
+      <section id="skills" #skills class="scroll-mt-35 my-10 md:my-20 text-gray-300 w-full">
+        <h2 class="text-3xl md:text-4xl md:text-4xl font-bold text-cyan-400 text-center mb-10" data-aos="fade-in">
         Habilidades
         </h2>
-        <div class="flex flex-wrap justify-center gap-4 max-w-[800px] mx-auto" data-aos="fade-in" data-aos-delay="100">
+        <div class="flex flex-wrap justify-center gap-2 md:gap-4 max-w-[800px] mx-auto" data-aos="fade-in" data-aos-delay="100">
         <div class="flex items-center gap-2 bg-gray-800 hover:bg-cyan-600 hover:text-white hover:scale-105 transition transform px-3 py-2 rounded-full text-sm border border-gray-500 animate-float">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" class="w-5 h-5" />
             <span>HTML</span>
@@ -549,8 +613,8 @@
       </section> 
       
       <!-- Sección: Contacto -->
-      <section id="getInTouch" #getInTouch data-section="getintouch" class="pb-10 text-white">
-        <h2 class="text-4xl font-bold text-center mb-16 tracking-widest bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-500 text-transparent bg-clip-text drop-shadow-sm">
+      <section id="getInTouch" #getInTouch data-section="getintouch" class="scroll-mt-35 my-10 md:my-20 text-gray-300 w-full">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 tracking-widest bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-500 text-transparent bg-clip-text drop-shadow-sm">
         ¡Hablemos!
       </h2>
 
@@ -591,7 +655,6 @@
       </section>
     </main>
   </div>
-
   <!-- Boton flotante -->
   <button
     *ngIf="showScrollTopButton"
@@ -603,7 +666,6 @@
       <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
     </svg>
   </button>
-  
 </div>
 
 <footer class="w-full bg-gray-900 border-t border-gray-900 text-white py-4">

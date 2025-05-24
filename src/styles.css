@@ -5,6 +5,13 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    background: linear-gradient(to bottom, #130024, #000000); /* Púrpura oscuro a negro */
+    min-height: 100vh; /* Asegura que el gradiente cubra toda la altura de la ventana */
+    margin: 0;
+    position: relative; /* Para posicionar las estrellas absolutas */
+}
+
 @keyframes float {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-5px); }
@@ -66,3 +73,40 @@ html {
     scrollbar-width: thin; /* ya es delgada por defecto */
     scrollbar-color: #00ffe1 #121212;
   }
+
+
+  /* Contenedor para las estrellas */
+.stars-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Para que esté detrás del contenido principal */
+    overflow: hidden;
+}
+
+/* Base de las estrellas (una sola estrella con múltiples sombras) */
+.star {
+    width: 2px; /* Tamaño de la estrella */
+    height: 2px;
+    background-color: white; /* Color de la estrella */
+    border-radius: 50%; /* Para que sean redondas */
+    position: absolute;
+    /*animation: twinkle 2s infinite alternate;  Animación de parpadeo */
+    animation: twinkle 2s infinite alternate, moveStar 30s linear infinite; /* Añadir otra animación */
+    opacity: 0; /* Empieza invisible y se revela con JS */
+}
+
+/* Animación de parpadeo */
+@keyframes twinkle {
+    0% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+/* Nueva animación de movimiento */
+@keyframes moveStar {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(100px, 50px); /* Ajusta los valores para un movimiento sutil */ }
+}
