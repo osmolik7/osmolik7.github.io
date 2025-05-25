@@ -25,13 +25,13 @@
 <div class="fixed top-[48px] left-0 right-0 h-4 z-50 backdrop-blur-sm bg-gray-900/70"></div>
 
 <!-- Menú horizontal fijo debajo del header -->
-<nav class="hidden sm:hidden md:block fixed top-16 left-1/2 transform -translate-x-1/2 z-50 bg-gray-800/70 text-sm md:text-base text-white shadow-sm rounded-xl px-4 backdrop-blur-xs">
+<nav class="hidden sm:hidden md:block fixed top-16 left-1/2 transform -translate-x-1/2 z-50 bg-gray-800/70 text-sm md:text-sm text-white shadow-sm rounded-xl px-4 backdrop-blur-xs">
   <div class="flex justify-center items-center h-12 space-x-4">
     <a href="#about"
       class="group flex items-center gap-1 px-3 py-1 rounded-xl text-gray-300
         {{aboutIsVisible ? 'border-b-1 border-cyan-400 bg-gray-800 shadow-cyan-400/40 shadow-md text-white' : ''}}
         hover:border-b-4 hover:border-cyan-400 hover:bg-gray-800 hover:shadow-cyan-400/40 hover:shadow-md hover:text-white
-        transition duration-200">
+        transition duration-200 font-tech">
       <svg class="w-4 h-4 fill-current transition duration-200 {{aboutIsVisible ? 'text-cyan-400': ''}} group-hover:text-cyan-400"
         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
         <path d="M96 128a128 128 0 1 0 256 0A128 128 0 1 0 96 128zm94.5 200.2l18.6 31L175.8 483.1l-36-146.9c-2-8.1-9.8-13.4-17.9-11.3C51.9 342.4 0 405.8 0 481.3c0 17 13.8 30.7 30.7 30.7l131.7 0c0 0 0 0 .1 0l5.5 0 112 0 5.5 0c0 0 0 0 .1 0l131.7 0c17 0 30.7-13.8 30.7-30.7c0-75.5-51.9-138.9-121.9-156.4c-8.1-2-15.9 3.3-17.9 11.3l-36 146.9L238.9 359.2l18.6-31c6.4-10.7-1.3-24.2-13.7-24.2L224 304l-19.7 0c-12.4 0-20.1 13.6-13.7 24.2z"/>
@@ -43,7 +43,7 @@
       class="group flex items-center gap-1 px-3 py-1 rounded-xl text-gray-300
         {{projectsIsVisible ? 'border-b-1 border-cyan-400 bg-gray-800 shadow-cyan-400/40 shadow-md text-white' : ''}}
         hover:border-b-2 hover:border-cyan-400 hover:bg-gray-800 hover:shadow-cyan-400/40 hover:shadow-md hover:text-white
-        transition duration-200">
+        transition duration-200 font-tech">
       <svg class="w-4 h-4 fill-current transition duration-200 {{projectsIsVisible ? 'text-cyan-400': ''}} group-hover:text-cyan-400"
         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
         <path d="M0 80C0 53.5 21.5 32 48 32l96 0c26.5 0 48 21.5 48 48l0 16 192 0 0-16c0-26.5 21.5-48 48-48l96 0c26.5 0 48 21.5 48 48l0 96c0 26.5-21.5 48-48 48l-96 0c-26.5 0-48-21.5-48-48l0-16-192 0 0 16c0 1.7-.1 3.4-.3 5L272 288l96 0c26.5 0 48 21.5 48 48l0 96c0 26.5-21.5 48-48 48l-96 0c-26.5 0-48-21.5-48-48l0-96c0-1.7 .1-3.4 .3-5L144 224l-96 0c-26.5 0-48-21.5-48-48L0 80z"/>
@@ -55,7 +55,7 @@
       class="group flex items-center gap-1 px-3 py-1 rounded-xl text-gray-300
         {{experienceIsVisible ? 'border-b-1 border-cyan-400 bg-gray-800 shadow-cyan-400/40 shadow-md text-white' : ''}}
         hover:border-b-2 hover:border-cyan-400 hover:bg-gray-800 hover:shadow-cyan-400/40 hover:shadow-md hover:text-white
-        transition duration-200">
+        transition duration-200 font-tech">
       <svg class="w-4 h-4 fill-current transition duration-200 {{experienceIsVisible ? 'text-cyan-400': ''}} group-hover:text-cyan-400"
         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
         <path d="M48 0C21.5 0 0 21.5 0 48L0 464c0 26.5 21.5 48 48 48l96 0 0-80c0-26.5 21.5-48 48-48s48 21.5 48 48l0 80 96 0c26.5 0 48-21.5 48-48l0-416c0-26.5-21.5-48-48-48L48 0zM64 240c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32zm112-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32z"/>
@@ -67,7 +67,7 @@
       class="group flex items-center gap-1 px-3 py-1 rounded-xl text-gray-300
         {{educationCertificaciontsIsVisible ? 'border-b-1 border-cyan-400 bg-gray-800 shadow-cyan-400/40 shadow-md text-white' : ''}}
         hover:border-b-2 hover:border-cyan-400 hover:bg-gray-800 hover:shadow-cyan-400/40 hover:shadow-md hover:text-white
-        transition duration-200">
+        transition duration-200 font-tech">
       <svg class="w-4 h-4 fill-current transition duration-200 {{educationCertificaciontsIsVisible ? 'text-cyan-400': ''}} group-hover:text-cyan-400"
         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
         <path d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9l0 28.1c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6C0 442.7-.9 448.3 .9 453.4s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7 .3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7C90.3 344.3 86 329.8 80 316.5l0-24.6c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5 .8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1L624.2 182.6c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1C336.1 33.4 328.1 32 320 32zM128 408c0 35.3 86 72 192 72s192-36.7 192-72L496.7 262.6 354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6L143.3 262.6 128 408z"/>
@@ -79,7 +79,7 @@
       class="group flex items-center gap-1 px-3 py-1 rounded-xl text-gray-300
         {{skillsIsVisible ? 'border-b-1 border-cyan-400 bg-gray-800 shadow-cyan-400/40 shadow-md text-white' : ''}}
         hover:border-b-2 hover:border-cyan-400 hover:bg-gray-800 hover:shadow-cyan-400/40 hover:shadow-md hover:text-white
-        transition duration-200">
+        transition duration-200 font-tech">
       <svg class="w-4 h-4 fill-current transition duration-200 {{skillsIsVisible ? 'text-cyan-400': ''}} group-hover:text-cyan-400"
         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
         <path d="M0 96C0 60.7 28.7 32 64 32l320 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zm144 4c-24.3 0-44 19.7-44 44l0 48c0 24.3 19.7 44 44 44l32 0c24.3 0 44-19.7 44-44l0-48c0-24.3-19.7-44-44-44l-32 0zm-4 44c0-2.2 1.8-4 4-4l32 0c2.2 0 4 1.8 4 4l0 48c0 2.2-1.8 4-4 4l-32 0c-2.2 0-4-1.8-4-4l0-48zm140-44c-11 0-20 9-20 20c0 9.7 6.9 17.7 16 19.6l0 76.4c0 11 9 20 20 20s20-9 20-20l0-96c0-11-9-20-20-20l-16 0zM132 296c0 9.7 6.9 17.7 16 19.6l0 76.4c0 11 9 20 20 20s20-9 20-20l0-96c0-11-9-20-20-20l-16 0c-11 0-20 9-20 20zm96 24l0 48c0 24.3 19.7 44 44 44l32 0c24.3 0 44-19.7 44-44l0-48c0-24.3-19.7-44-44-44l-32 0c-24.3 0-44 19.7-44 44zm44-4l32 0c2.2 0 4 1.8 4 4l0 48c0 2.2-1.8 4-4 4l-32 0c-2.2 0-4-1.8-4-4l0-48c0-2.2 1.8-4 4-4z"/>
@@ -91,7 +91,7 @@
       class="group flex items-center gap-1 px-3 py-1 rounded-xl text-gray-300
         {{getInTouchIsVisible ? 'border-b-1 border-cyan-400 bg-gray-800 shadow-cyan-400/40 shadow-md text-white' : ''}}
         hover:border-b-2 hover:border-cyan-400 hover:bg-gray-800 hover:shadow-cyan-400/40 hover:shadow-md hover:text-white
-        transition duration-200">
+        transition duration-200 font-tech">
       <svg class="w-4 h-4 fill-current transition duration-200 {{getInTouchIsVisible ? 'text-cyan-400': ''}} group-hover:text-cyan-400"
         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
         <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/>
@@ -113,7 +113,18 @@
         <div class="w-full bg-gray-900 rounded-2xl shadow-xl border border-cyan-700/40 flex flex-col lg:flex-row items-center md:items-start p-6 md:p-8 gap-6 hover:shadow-cyan-500/20 transition-shadow duration-300">
           
           <!-- Imagen del perfil -->
-          <div class="w-40 h-40 flex-shrink-0 rounded-full overflow-hidden border-4 border-cyan-500 shadow-md shadow-cyan-800/40 mx-auto md:mx-0">
+          <div
+            class="w-40 h-40 flex-shrink-0 rounded-full overflow-hidden border-4 border-cyan-500 shadow-md shadow-cyan-800/40 mx-auto md:mx-0"
+            data-aos="fade-in"
+            data-aos-duration="2000"
+            data-aos-once="true"
+            data-aos-anchor-placement="top-bottom"
+            data-aos-easing="ease-out"
+            data-aos-delay="100"
+            data-aos-mirror="false"
+            data-aos-offset="100"
+            aos-init aos-animate
+          >            
             <img src="imgs/foto-perfil.jpg" alt="Alejandro Camacho" class="w-full h-full object-cover">
           </div>
       
@@ -138,7 +149,7 @@
                   <li><strong class="text-white">Ubicación:</strong> Quito, Ecuador</li>
                   <li><strong class="text-white">Email:</strong> camachoosmolik&#64;gmail.com</li>
                   <li><strong class="text-white">Idiomas:</strong> Español (nativo), Inglés (intermedio)</li>
-                  <li><strong class="text-white">Disponibilidad:</strong> Remoto</li>
+                  <li><strong class="text-white">Disponibilidad:</strong> Remoto o Presencial</li>
                 </ul>
               </div>
       
@@ -159,9 +170,13 @@
 
       <!-- Sección: Proyectos -->
       <section id="projects" #projects data-section="projects" class="scroll-mt-35 my-10 md:my-20 text-gray-300 w-full text-sm md:text-base">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 tracking-widest bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-500 text-transparent bg-clip-text drop-shadow-sm">
-          Proyectos Destacados
+        <h2 class="text-2xl md:text-3xl font-extrabold text-center mb-16 tracking-widest 
+           bg-gradient-to-r from-cyan-400 via-cyan-500
+           text-transparent bg-clip-text drop-shadow-[0_0_6px_rgba(0,255,255,0.5)] 
+           font-tech">
+            Proyectos Destacados
         </h2>
+
         <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
           <!-- Proyecto 1 -->
           <div class="bg-gray-900 rounded-2xl shadow-xl border border-cyan-700/40 hover:shadow-cyan-500/30 transition-shadow duration-300 p-6">
@@ -222,8 +237,10 @@
 
       <!-- Sección: Experiencia -->
       <section id="experience" #experience data-section="experience" class="scroll-mt-35 my-10 md:my-20 text-gray-300 w-full text-sm md:text-base">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 tracking-widest bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-500 text-transparent bg-clip-text drop-shadow-sm">
-          Experiencia Profesional
+        <h2 class="text-2xl md:text-3xl font-extrabold text-center mb-16 tracking-widest 
+           bg-gradient-to-r from-cyan-400 via-cyan-500
+           text-transparent bg-clip-text drop-shadow-[0_0_6px_rgba(0,255,255,0.5)] 
+           font-tech">          Experiencia Profesional
         </h2>
         <div class="space-y-12 max-w-4xl mx-auto">
           <!-- AGROCALIDAD -->
@@ -297,8 +314,11 @@
       
       <!-- Sección: Educacion y certificaos -->
       <section id="educationCertifications" #educationCertifications data-section="education-certifications" class="scroll-mt-35 my-10 md:my-20 text-gray-300 w-full text-sm md:text-base">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 tracking-widest bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-500 text-transparent bg-clip-text drop-shadow-sm">
-          Educación y Certificados
+        <h2 class="text-2xl md:text-3xl font-extrabold text-center mb-16 tracking-widest 
+           bg-gradient-to-r from-cyan-400 via-cyan-500
+           text-transparent bg-clip-text drop-shadow-[0_0_6px_rgba(0,255,255,0.5)] 
+           font-tech">          
+           Educación y Certificados
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10  mx-auto">
           <!-- Columna: Educación -->
@@ -357,7 +377,7 @@
             <!-- Certificado 8 -->
           <div class="bg-gray-900 rounded-xl shadow-md border border-emerald-700/40 hover:shadow-emerald-500/30 transition-shadow duration-300 p-3">
               <div class="flex items-center space-x-4">
-                <img src="imgs/fundamentosarquitectura.png" alt="Coursera Logo" class="w-10 h-10 object-contain">
+                <img src="imgs/fundamentosarquitectura.png" alt="Fundamentos Arquitectura Logo" class="w-10 h-10 object-contain">
                 <div class="flex-1 flex justify-between items-center">
                   <!-- Texto en columna -->
                   <div>
@@ -376,7 +396,7 @@
             <!-- Certificado 7 -->
           <div class="bg-gray-900 rounded-xl shadow-md border border-emerald-700/40 hover:shadow-emerald-500/30 transition-shadow duration-300 p-3">
               <div class="flex items-center space-x-4">
-                <img src="imgs/docker.png" alt="Coursera Logo" class="w-10 h-10 object-contain">
+                <img src="imgs/docker.png" alt="Docker Profesional Logo" class="w-10 h-10 object-contain">
                 <div class="flex-1 flex justify-between items-center">
                   <!-- Texto en columna -->
                   <div>
@@ -395,7 +415,7 @@
             <!-- Certificado 6 -->
           <div class="bg-gray-900 rounded-xl shadow-md border border-emerald-700/40 hover:shadow-emerald-500/30 transition-shadow duration-300 p-3">
               <div class="flex items-center space-x-4">
-                <img src="imgs/git.png" alt="Coursera Logo" class="w-10 h-10 object-contain">
+                <img src="imgs/git.png" alt="Git Profesional Logo" class="w-10 h-10 object-contain">
                 <div class="flex-1 flex justify-between items-center">
                   <!-- Texto en columna -->
                   <div>
@@ -414,7 +434,7 @@
             <!-- Certificado 5 -->
           <div class="bg-gray-900 rounded-xl shadow-md border border-emerald-700/40 hover:shadow-emerald-500/30 transition-shadow duration-300 p-3">
               <div class="flex items-center space-x-4">
-                <img src="imgs/udemy.png" alt="Coursera Logo" class="w-10 h-10 object-contain">
+                <img src="imgs/udemy.png" alt="Angular y SpringBoot Logo" class="w-10 h-10 object-contain">
                 <div class="flex-1 flex justify-between items-center">
                   <!-- Texto en columna -->
                   <div>
@@ -512,8 +532,11 @@
       
       <!-- Sección: Educacion y certificaos -->
       <section id="skills" #skills class="scroll-mt-35 my-10 md:my-20 text-gray-300 w-full">
-        <h2 class="text-3xl md:text-4xl md:text-4xl font-bold text-cyan-400 text-center mb-10" data-aos="fade-in">
-        Habilidades
+        <h2 class="text-2xl md:text-3xl font-extrabold text-center mb-16 tracking-widest 
+           bg-gradient-to-r from-cyan-400 via-cyan-500
+           text-transparent bg-clip-text drop-shadow-[0_0_6px_rgba(0,255,255,0.5)] 
+           font-tech">        
+           Habilidades
         </h2>
         <div class="flex flex-wrap justify-center gap-2 md:gap-4 max-w-[800px] mx-auto" data-aos="fade-in" data-aos-delay="100">
         <div class="flex items-center gap-2 bg-gray-800 hover:bg-cyan-600 hover:text-white hover:scale-105 transition transform px-3 py-2 rounded-full text-sm border border-gray-500 animate-float">
@@ -614,9 +637,12 @@
       
       <!-- Sección: Contacto -->
       <section id="getInTouch" #getInTouch data-section="getintouch" class="scroll-mt-35 my-10 md:my-20 text-gray-300 w-full">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 tracking-widest bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-500 text-transparent bg-clip-text drop-shadow-sm">
-        ¡Hablemos!
-      </h2>
+        <h2 class="text-2xl md:text-3xl font-extrabold text-center mb-16 tracking-widest 
+           bg-gradient-to-r from-cyan-400 via-cyan-500
+           text-transparent bg-clip-text drop-shadow-[0_0_6px_rgba(0,255,255,0.5)] 
+           font-tech">        
+           ¡Hablemos!
+        </h2>
 
       <div class="max-w-4xl mx-auto bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-600">
         <p class="text-center text-lg mb-4">¿Tienes un proyecto en mente o simplemente quieres decir hola? ¡Estoy disponible para hablar!</p>

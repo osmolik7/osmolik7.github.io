@@ -110,3 +110,8 @@ body {
     0% { transform: translate(0, 0); }
     100% { transform: translate(100px, 50px); /* Ajusta los valores para un movimiento sutil */ }
 }
+
+/* O puedes hacer una clase personalizada */
+.font-tech {
+  font-family: 'Orbitron', sans-serif;
+}

@@ -4,6 +4,8 @@ import emailjs from 'emailjs-com';
 import Swal from 'sweetalert2';
 import * as AOS from 'aos';
 
+declare var google: any;
+
 @Component({
   selector: 'app-root',
   imports: [CommonModule],
@@ -139,4 +141,5 @@ export class AppComponent implements OnInit{
         starsContainer?.appendChild(star);
     }
   }
+
 }
